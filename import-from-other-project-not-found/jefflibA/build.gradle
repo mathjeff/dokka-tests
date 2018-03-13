@@ -32,5 +32,9 @@ android {
 afterEvaluate {
   dokka {
     classpath = new ArrayList<File>(project.tasks['assemble'].outputs.files.files)
+    externalDocumentationLink {
+      url = new URL("https://developer.android.com/reference/")
+      packageListUrl = new URL("https://developer.android.com/reference/package-list")
+    }
   }
 }
